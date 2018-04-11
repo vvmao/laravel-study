@@ -56,6 +56,12 @@ p {
         color: #fff;
     }
 }
+#logout {
+    cursor: default;
+    &:hover {
+        background-color: transparent;
+    }
+}
 /* footer */
 
 footer {
@@ -105,7 +111,6 @@ aside {
         }
     }
 }
-
 section.user_info {
     padding-bottom: 10px;
     margin-top: 20px;
@@ -121,26 +126,21 @@ section.user_info {
         margin-top: 15px;
     }
 }
-
 .gravatar {
     float: left;
     margin-right: 10px;
     max-width: 50px;
     border-radius: 50%;
 }
-
-
 /* forms */
 
 input, textarea, select, .uneditable-input {
-  border: 1px solid #bbb;
-  margin-bottom: 15px;
+    border: 1px solid #bbb;
+    margin-bottom: 15px;
 }
-
 input {
-  height: auto !important;
+    height: auto !important;
 }
-
 .panel {
-  margin-top: 50px;
+    margin-top: 50px;
 }
