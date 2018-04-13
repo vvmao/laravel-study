@@ -10,3 +10,4 @@
 [09-Apr-2018 19:39:08 Asia/Chongqing] PHP Fatal error:  require(): Failed opening required '/home/asus/project/php/public/../vendor/autoload.php' (include_path='.:/usr/share/php') in /home/asus/project/php/public/index.php on line 24
 [09-Apr-2018 19:39:08 Asia/Chongqing] PHP Warning:  require(/home/asus/project/php/public/../vendor/autoload.php): failed to open stream: No such file or directory in /home/asus/project/php/public/index.php on line 24
 [09-Apr-2018 19:39:08 Asia/Chongqing] PHP Fatal error:  require(): Failed opening required '/home/asus/project/php/public/../vendor/autoload.php' (include_path='.:/usr/share/php') in /home/asus/project/php/public/index.php on line 24
+[13-Apr-2018 15:42:49 UTC] PHP Fatal error:  Cannot make static method Illuminate\Database\Eloquent\Model::boot() non static in class App\Models\User in /home/asus/project/php/app/Models/User.php on line 8
