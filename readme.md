@@ -56,3 +56,14 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+
+
+## 密码重置功能
+一般步骤如下
+1. 用户点击重设密码链接并跳转到重设密码页面；
+2. 在重设密码页面输入邮箱信息并提交；
+3. 控制器通过该邮箱查找到指定用户并为该用户生成一个密码令牌，接着将该令牌以链接的形式发送到用户提交的邮箱上；
+4. 用户查看自己个人邮箱，点击重置密码链接跳转到重置密码页面；
+5. 用户在该页面输入自己的邮箱和密码并提交；
+6. 控制器对用户的邮箱和密码重置令牌进行匹配，匹配成功则更新用户密码；
