@@ -44,7 +44,8 @@ class UsersController extends Controller
      */
     public function show(User $user)
     {
-        return view('users.show', compact('user'));
+        $statuses = $user->statuses()->orderBy('created_at','desc')->paginate(30);
+        return view('users.show', compact('user','statuses'));
     }
 
     /**
@@ -74,8 +75,9 @@ class UsersController extends Controller
 
     /**
      * 个人资料修改页面
-     * @param  User   $user 用户实例
-     * @return html
+     * @param User $user 用户实例
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     * @throws \Illuminate\Auth\Access\AuthorizationException
      */
     public function edit(User $user)
     {
@@ -85,8 +87,10 @@ class UsersController extends Controller
 
     /**
      * 个人资料提交更改
-     * @param  Request $request 请求实例
-     * @return html
+     * @param User $user
+     * @param Request $request 请求实例
+     * @return \Illuminate\Http\RedirectResponse
+     * @throws \Illuminate\Auth\Access\AuthorizationException
      */
     public function update(User $user, Request $request)
     {
